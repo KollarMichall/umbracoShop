@@ -1,0 +1,57 @@
+﻿@inherits UmbracoShopViewPage
+@using UmbracoEshop.lib.Models
+@using UmbracoEshop.lib.Repositories
+
+
+@{
+    MembershipUser user = Umbraco.MemberIsLoggedOn() ? System.Web.Security.Membership.GetUser() : null;
+    bool addSeparator = false;
+}
+
+@if (user != null)
+{
+    <div class="protected-menubar">
+        <nav class="navbar">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-protected" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="title">@user.UserName</div>
+        </nav>
+        <div id="navbar-protected" class="collapse navbar-collapse">
+            <div class="menu">
+                @if (System.Web.Security.Roles.IsUserInRole(user.UserName, UmbracoEshopMemberRepository.UmbracoEshopMemberAdminRole))
+                {       
+                    <ul class="admin-menu">
+                        <li><a href="@Url.Content("~/clenska-sekcia/vyrobcovia")">Výrobcovia</a></li>
+                        <li><a href="@Url.Content("~/clenska-sekcia/vyrobky")">Vyrobky</a></li>
+                        
+                    </ul>
+                    addSeparator = true;
+                }
+                @if (System.Web.Security.Roles.IsUserInRole(user.UserName, UmbracoEshopMemberRepository.UmbracoEshopMemberCustomerRole))
+                {
+                    if (addSeparator)
+                    {
+                        <div class="separator"></div>
+                    }
+                    <ul class="customer-menu">
+                        <li><a href="@Url.Content("~/clenska-sekcia/moje-heslo")">Zmena hesla</a></li>
+                        <li><a href="@Url.Content("~/clenska-sekcia/moje-osobne-udaje")">Moje osobné údaje</a></li>
+                        <li><a href="@Url.Content("~/clenska-sekcia/moje-objednavky")">Moje objednávky</a></li>
+                    </ul>
+                }
+
+            </div>
+            @using (Html.BeginUmbracoForm<UmbracoEshop.lib.Controllers.MemberController>("Logout", null, new { @class = "form-horizontal", role = "form" }))
+            {
+                <div class="logout-btn">
+                    <a href="#" onclick="document.getElementById('submitProtectedLogoutButton').click(); return false;">ODHLÁSIŤ</a>
+                    <input type="submit" id="submitProtectedLogoutButton" class="hidden" />
+                </div>
+            }
+        </div>
+    </div>
+}

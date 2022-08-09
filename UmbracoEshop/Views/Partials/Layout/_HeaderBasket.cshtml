@@ -1,0 +1,14 @@
+﻿@inherits UmbracoViewPage
+@using UmbracoEshop.lib.Controllers
+@{ 
+    string sessionId = new _BaseControllerUtil().CurrentSessionId;
+}
+
+        <div>
+         Obsah kosika: <span class="header-basket-pcs">0</span>, <span class="header-basket-price">0</span>
+        </div>
+
+
+        <script>
+            nastavSessionId('@sessionId')
+        </script>

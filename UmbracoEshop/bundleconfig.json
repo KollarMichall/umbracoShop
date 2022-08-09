@@ -1,0 +1,14 @@
+[
+  {
+    "outputFileName": "#\\UmbracoEshop\\UmbracoEshop\\Styles\\css\\stylemojhowebu.min.css",
+    "inputFiles": [
+      "#\\UmbracoEshop\\UmbracoEshop\\Styles\\css\\stylemojhowebu.css"
+    ]
+  },
+  {
+    "outputFileName": "#\\UmbracoEshop\\UmbracoEshop\\Scripts\\umbracoEshop.min.js",
+    "inputFiles": [
+      "#\\UmbracoEshop\\UmbracoEshop\\Scripts\\umbracoEshop.js"
+    ]
+  }
+]

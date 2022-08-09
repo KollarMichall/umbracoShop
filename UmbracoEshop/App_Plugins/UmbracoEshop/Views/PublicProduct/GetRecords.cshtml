@@ -1,0 +1,26 @@
+﻿@using UmbracoEshop.lib.Models
+@model VyrobokPagingListModel
+
+
+
+<h1>VÝROBKY</h1>
+@foreach(VyrobokModel vyrobok in Model.Items)
+            {
+                <div class="public-product">
+                    Kod: @vyrobok.KodVyrobku
+                    <br />
+                    Nazov Vyrobku: @vyrobok.NazovVyrobku
+                    <br />
+                    Cena Vyrobku: @vyrobok.CenaVyrobkuAMena()
+                    <div class="product-description">
+                        @Html.Raw(vyrobok.PopisVyrobku)
+                    </div>
+                    <div>
+                    <a href="#" onclick="pridatDoKosika(this); return false;" data-vyrobok="@vyrobok.pk" >Pridat do kosika</a>
+                    </div>
+                </div>
+            } 
+
+  
+
+

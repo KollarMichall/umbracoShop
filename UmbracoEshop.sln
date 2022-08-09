@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UmbracoEshop", "UmbracoEshop\UmbracoEshop.csproj", "{54A7FA89-09D7-422F-8737-83BCABFB6282}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UmbracoEshop.lib", "UmbracoEshop.lib\UmbracoEshop.lib.csproj", "{82E7B142-660E-4397-BFAF-AFE93AE5DB68}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54A7FA89-09D7-422F-8737-83BCABFB6282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54A7FA89-09D7-422F-8737-83BCABFB6282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54A7FA89-09D7-422F-8737-83BCABFB6282}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54A7FA89-09D7-422F-8737-83BCABFB6282}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82E7B142-660E-4397-BFAF-AFE93AE5DB68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82E7B142-660E-4397-BFAF-AFE93AE5DB68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82E7B142-660E-4397-BFAF-AFE93AE5DB68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82E7B142-660E-4397-BFAF-AFE93AE5DB68}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A36F658-AF31-4A74-AC2B-5C4ECFA601EA}
+	EndGlobalSection
+EndGlobal

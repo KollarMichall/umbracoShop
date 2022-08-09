@@ -1,0 +1,24 @@
+﻿@using UmbracoEshop.lib.Models
+@model BasketModel
+
+
+
+<h1>KOSIK</h1>
+@foreach(Product2QuoteModel item in Model.QuoteItems)
+            {
+                <div class="public-product">
+                    Kod: @item.ItemCode
+                    <br />
+                    Nazov: @item.ItemName
+                    <br />
+                    Mnozstvo: @item.ItemPcs
+                    <br/>
+                    Jednotkova cena: @item.JednotkovaCenaAMena()
+                    <br />
+                    Celkova cena: @item.CelkovaCenaAMena()
+                </div>
+            } 
+
+  
+
+
